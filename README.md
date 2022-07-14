@@ -13,20 +13,36 @@ Python scripts for performing optical flow estimation using the GMFlowNet model 
 - opencv-python
 - onnxruntime or onnxruntime-gpu
 
-### image_flow_estimation.py
+### for image_flow_estimation.py
 ```bash
 python3 -m pip install imread-from-url
 ```
 
-### video_flow_estimation.py
+### for video_flow_estimation.py
 ```bash
 python3 -m pip install youtube_dl
 python3 -m pip install git+https://github.com/zizo-pro/pafy@b8976f22c19e4ab5515cacbfae0a3970370c102b
 ```
 
 ## ONNX model
+Download the models from [his repository](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/306_GMFlowNet) and save them into the **[models](https://github.com/fateshelled/ONNX-GMFlowNet-Optical-Flow-Estimation/tree/main/models)** folder.
 
-The original models were converted to different formats (including .onnx) by [PINTO0309](https://github.com/PINTO0309), download the models from [his repository](https://github.com/PINTO0309/PINTO_model_zoo/tree/main/306_GMFlowNet) and save them into the **[models](https://github.com/fateshelled/ONNX-GMFlowNet-Optical-Flow-Estimation/tree/main/models)** folder.
+
+## DEMO
+- Image inference:
+```bash
+python3 image_flow_estimation.py
+```
+
+- Video inference:
+```bash
+python3 video_flow_estimation.py
+```
+
+- Webcam inference:
+```bash
+python webcam_flow_estimation.py
+```
 
 
 ## References:
